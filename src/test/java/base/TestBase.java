@@ -1,21 +1,28 @@
 package base;
 
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
+import utilities.ExcelReader;
+
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
+
 public class TestBase {
     /*
      *WebDriver
      *properties
-     *Log
+     *Log-log4j jar, log, log4j.properties,Logger
      *Extent Reports
      *DB
      * Excel
@@ -26,9 +33,13 @@ public class TestBase {
     public Properties config = new Properties();
     public Properties OR = new Properties();
     public static FileInputStream fis;
+    public static Logger log = LogManager.getLogger("devpinoyLogger");
+    public static ExcelReader excel = new ExcelReader(System.getProperty("user.dir") + "\\src\\test\\java\\resources\\excel\\TestData.xlsx");
+
 
     @BeforeSuite
     public void setUp() {
+        System.out.println(System.getProperty("user.dir") + "\\src\\test\\java\\resources\\excel\\TestData.xlsx");
         if (driver == null) {
 
             try {
@@ -39,6 +50,8 @@ public class TestBase {
             }
             try {
                 config.load(fis);
+                log.debug("Config Loaded");
+                log.debug("Config file Loaded");
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -50,6 +63,7 @@ public class TestBase {
             }
             try {
                 OR.load(fis);
+                log.debug("OR file Loaded");
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -59,17 +73,31 @@ public class TestBase {
                 System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") +
                         "\\src\\test\\java\\resources\\executables\\chromedriver.exe");
             driver = new ChromeDriver();
+            log.debug("Chrome Loaded");
         }
         driver.get(config.getProperty("testsiteurl"));
+        log.debug("Url Loaded" + config.getProperty("testsiteurl"));
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Integer.parseInt(config.getProperty("implicit.wait")), TimeUnit.SECONDS);
     }
 
+    public boolean isElementPresent(By by) {
+        try {
+            driver.findElement(by);
+            return true;
+        } catch (NoSuchElementException e) {
+            return false;
+        }
+
+
+    }
 
     @AfterSuite
     public void tearDown() {
-   if(driver!=null)
+        if (driver != null)
             driver.quit();
+        log.info("driver closed succesfully");
     }
+
 }
 
