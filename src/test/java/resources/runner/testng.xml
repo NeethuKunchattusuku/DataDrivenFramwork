@@ -9,6 +9,8 @@
                     <include name="verifylandingpage"/>
                 </methods>
             </class>
+            <class name="testcases.AddCustomerTest">
+            </class>
         </classes>
     </test>
 </suite>

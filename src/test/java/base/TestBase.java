@@ -9,7 +9,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
-import utilities.ExcelReader;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -30,16 +29,14 @@ public class TestBase {
      */
 
     public static WebDriver driver;
-    public Properties config = new Properties();
-    public Properties OR = new Properties();
+    public static Properties config = new Properties();
+    public static Properties OR = new Properties();
     public static FileInputStream fis;
     public static Logger log = LogManager.getLogger("devpinoyLogger");
-    public static ExcelReader excel = new ExcelReader(System.getProperty("user.dir") + "\\src\\test\\java\\resources\\excel\\TestData.xlsx");
-
 
     @BeforeSuite
     public void setUp() {
-        System.out.println(System.getProperty("user.dir") + "\\src\\test\\java\\resources\\excel\\TestData.xlsx");
+
         if (driver == null) {
 
             try {

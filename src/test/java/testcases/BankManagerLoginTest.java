@@ -11,16 +11,13 @@ public class BankManagerLoginTest extends TestBase {
     @Test
     public void loginAsBankManager() throws InterruptedException {
         driver.findElement(By.xpath(OR.getProperty("bmlbutton"))).click();
-
         log.debug("Clicked on the Bank Manager button");
     }
 
     @Test
-    public void verifylandingpage() {
+    public void verifylandingpage() throws InterruptedException {
         Assert.assertTrue(isElementPresent(By.xpath(OR.getProperty("Addcustomer"))));
         driver.findElement(By.xpath(OR.getProperty("Addcustomer"))).click();
-
-
-    }
+            }
 
 }
