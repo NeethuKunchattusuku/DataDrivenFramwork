@@ -7,12 +7,14 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.time.Duration;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
@@ -33,6 +35,7 @@ public class TestBase {
     public static Properties OR = new Properties();
     public static FileInputStream fis;
     public static Logger log = LogManager.getLogger("devpinoyLogger");
+    public static WebDriverWait wait;
 
     @BeforeSuite
     public void setUp() {
@@ -42,6 +45,7 @@ public class TestBase {
             try {
                 fis = new FileInputStream(System.getProperty("user.dir") +
                         "\\src\\test\\java\\resources\\properties\\Config.properties");
+
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
             }
@@ -76,9 +80,11 @@ public class TestBase {
         log.debug("Url Loaded" + config.getProperty("testsiteurl"));
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Integer.parseInt(config.getProperty("implicit.wait")), TimeUnit.SECONDS);
+        wait=new WebDriverWait(driver, Duration.ofSeconds(5));
     }
 
     public boolean isElementPresent(By by) {
+
         try {
             driver.findElement(by);
             return true;

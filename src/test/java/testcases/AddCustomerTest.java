@@ -1,7 +1,10 @@
 package testcases;
 
 import base.TestBase;
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import utilities.ExcelReader;
@@ -21,12 +24,15 @@ public class AddCustomerTest extends TestBase {
     }
 
     @Test(dataProvider = "getData1")
-    public void Addcustomer(String Fname, String Lname, String postalcod) throws IOException, InterruptedException {
+    public void Addcustomer(String Fname, String Lname, String postalcod,String alerMessage) throws IOException, InterruptedException {
         driver.findElement(By.xpath(OR.getProperty("FirstNam"))).sendKeys(Fname);
         driver.findElement(By.xpath(OR.getProperty("Lname"))).sendKeys(Lname);
         driver.findElement(By.xpath(OR.getProperty("postalCod"))).sendKeys(postalcod);
         driver.findElement(By.xpath(OR.getProperty("AddCustButton"))).click();
-        driver.switchTo().alert().accept();
+        Alert alert = wait.until(ExpectedConditions.alertIsPresent());
+        Assert.assertTrue(alert.getText().contains(alerMessage));
+        alert.accept();
+
     }
 
     @DataProvider(name = "getData1")
