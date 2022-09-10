@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="testcases.BankManagerLoginTest"
+           tests="2"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="0.772">
+  <properties />
+  
+
+  
+
+      <testcase name="loginAsBankManager" time="0.246" />
+      <testcase name="verifylandingpage" time="0.526" />
+  
+
+</testsuite>

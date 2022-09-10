@@ -1,3 +1,6 @@
 testcases\BankManagerLoginTest.class
 base\TestBase.class
+utilities\ExcelReader.class
+base\Listeners\CustomListeners.class
 rough\Testproperties.class
+testcases\AddCustomerTest.class

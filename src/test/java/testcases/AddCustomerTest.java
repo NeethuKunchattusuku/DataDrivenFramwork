@@ -1,17 +1,20 @@
 package testcases;
 
+import base.Listeners.CustomListeners;
 import base.TestBase;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import utilities.ExcelReader;
 
 import java.io.FileInputStream;
 import java.io.IOException;
 
+@Listeners(CustomListeners.class)
 public class AddCustomerTest extends TestBase {
     static String propertypath = System.getProperty("user.dir");
     static String excelpath = propertypath + "\\src\\test\\java\\resources\\excel\\TestData.xlsx";
