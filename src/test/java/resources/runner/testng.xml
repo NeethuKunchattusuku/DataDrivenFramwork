@@ -4,7 +4,7 @@
     <listeners>
         <listener class-name="org.uncommons.reportng.HTMLReporter"/>
         <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
-
+        <listener class-name="utilities.ExtentManager"/>
     </listeners>
     <test verbose="2" preserve-order="true" name="C:\Users\neeth\Documents\GitHub\Repo\DataDrivenFramwork">
         <classes>
