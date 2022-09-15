@@ -8,3 +8,4 @@ testcases\AddCustomerTest.class
 testcases\BankManagerLoginTest.class
 utilities\ExcelReader.class
 resources\Listeners\ScreenshotTest.class
+testcases\OpenAccount.class

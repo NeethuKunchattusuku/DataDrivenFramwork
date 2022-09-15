@@ -41,12 +41,14 @@ public class OpenAccount extends TestBase {
         for(int i =1; i<=Lelement.size()-1;i++) {
             {
 
+                for(int j = 1;j<=Celement.size()-1;j++) {
                     se.selectByVisibleText(Lelement.get(i).getText());
-                    se1.selectByVisibleText(Celement.get(i).getText());
+                    se1.selectByVisibleText(Celement.get(j).getText());
                     driver.findElement(By.xpath(OR.getProperty("Process"))).click();
                     alert = wait.until(ExpectedConditions.alertIsPresent());
                     Assert.assertTrue(alert.getText().contains(message));
                     alert.accept();
+                }
 
 
             }
