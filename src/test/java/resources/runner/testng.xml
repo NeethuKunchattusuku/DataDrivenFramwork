@@ -8,14 +8,9 @@
     </listeners>
     <test verbose="2" preserve-order="true" name="C:\Users\neeth\Documents\GitHub\Repo\DataDrivenFramwork">
         <classes>
-            <class name="testcases.BankManagerLoginTest">
-                <methods>
-                    <include name="loginAsBankManager"/>
-                    <include name="verifylandingpage"/>
-                </methods>
-            </class>
-            <class name="testcases.AddCustomerTest">
-            </class>
+            <class name="testcases.BankManagerLoginTest"/>
+            <class name="testcases.AddCustomerTest"/>
+            <class name="testcases.OpenAccount"/>
         </classes>
     </test>
 </suite>

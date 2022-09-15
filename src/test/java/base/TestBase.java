@@ -36,9 +36,12 @@ public abstract class TestBase  {
     public static FileInputStream fis;
     public static Logger log = LogManager.getLogger("devpinoyLogger");
     public static WebDriverWait wait;
+    public static String propertypath = System.getProperty("user.dir");
+    public static String excelpath = propertypath + "\\src\\test\\java\\resources\\excel\\TestData.xlsx";
 
     @BeforeSuite
     public void setUp() {
+
 
         if (driver == null) {
 

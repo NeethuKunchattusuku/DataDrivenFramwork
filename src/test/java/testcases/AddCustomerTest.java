@@ -13,21 +13,23 @@ import utilities.ExcelReader;
 
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.lang.reflect.Method;
 
 @Listeners(CustomListeners.class)
 public class AddCustomerTest extends TestBase {
-    static String propertypath = System.getProperty("user.dir");
-    static String excelpath = propertypath + "\\src\\test\\java\\resources\\excel\\TestData.xlsx";
-    FileInputStream fis = new FileInputStream(System.getProperty("user.dir") +
-            "\\src\\test\\java\\resources\\properties\\OR.properties");
+
+//    public static Properties config = new Properties();
+
+    FileInputStream fis = new FileInputStream(excelpath);
 
 
     public AddCustomerTest() throws IOException {
-        OR.load(fis);
+       OR.load(fis);
+       config.load(fis);
     }
 
-    @Test(dataProvider = "getData1")
-    public void Addcustomer(String Fname, String Lname, String postalcod,String alerMessage) throws IOException, InterruptedException {
+    @Test(dataProvider = "getData")
+    public void AddCustomerTest(String Fname, String Lname, String postalcod,String alerMessage) throws IOException, InterruptedException {
         driver.findElement(By.xpath(OR.getProperty("FirstNam"))).sendKeys(Fname);
         driver.findElement(By.xpath(OR.getProperty("Lname"))).sendKeys(Lname);
         driver.findElement(By.xpath(OR.getProperty("postalCod"))).sendKeys(postalcod);
@@ -38,9 +40,11 @@ public class AddCustomerTest extends TestBase {
 
     }
 
-    @DataProvider(name = "getData1")
-    public Object[][] getdata() throws IOException {
-        Object[][] data = TestdataReading(excelpath, "AddCustomerTest");
+    @DataProvider(name = "getData")
+    public static Object[][] getdata(Method m) throws IOException {
+        String sheetdata= m.getName();
+        Object[][] data = TestdataReading(excelpath,sheetdata);
+        TestBase.OR.getProperty(excelpath);
         return data;
     }
 
