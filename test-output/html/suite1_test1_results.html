@@ -12,13 +12,15 @@
 <body>
 <h1>C:\Users\neeth\Documents\GitHub\Repo\DataDrivenFramwork</h1>
 <p>
-  Test Duration: 128.484s
+  Test Duration: 150.573s
 </p>
 
 
 
+
+
   <table class="resultsTable" width="100%">
-    <tr><th colspan="3" class="header failed">Failed Tests</th></tr>
+    <tr><th colspan="3" class="header passed">Passed Tests</th></tr>
               <tr>
         <td colspan="3" class="group">testcases.AddCustomerTest</td>
       </tr>
@@ -28,89 +30,32 @@
           AddCustomerTest
       </td>
   <td class="duration">
-    0.000s
+    8.298s
   </td>
   <td class="result">
         
+          <i>Method Arguments: </i><span class="arguments">"Neethu", "Nair", "234r", "Customer added successfully"</span><br />
     
         
 
-        <a href="javascript:toggleElement('exception-0', 'block')" title="Click to expand/collapse"><b>java.lang.RuntimeException: java.lang.IllegalStateException: Cannot get a STRING value from a NUMERIC cell</b></a><br />
-    <div class="stackTrace" id="exception-0">
-              org.testng.internal.invokers.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:57)<br />
-              org.testng.internal.invokers.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:157)<br />
-              org.testng.internal.Parameters.handleParameters(Parameters.java:791)<br />
-              org.testng.internal.Parameters.handleParameters(Parameters.java:728)<br />
-              org.testng.internal.invokers.ParameterHandler.handleParameters(ParameterHandler.java:72)<br />
-              org.testng.internal.invokers.ParameterHandler.createParameters(ParameterHandler.java:51)<br />
-              org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:917)<br />
-              org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)<br />
-              org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)<br />
-              org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)<br />
-              java.base/java.util.ArrayList.forEach(ArrayList.java:1510)<br />
-              org.testng.TestRunner.privateRun(TestRunner.java:806)<br />
-              org.testng.TestRunner.run(TestRunner.java:601)<br />
-              org.testng.SuiteRunner.runTest(SuiteRunner.java:433)<br />
-              org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)<br />
-              org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)<br />
-              org.testng.SuiteRunner.run(SuiteRunner.java:330)<br />
-              org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br />
-              org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)<br />
-              org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)<br />
-              org.testng.TestNG.runSuitesLocally(TestNG.java:1176)<br />
-              org.testng.TestNG.runSuites(TestNG.java:1099)<br />
-              org.testng.TestNG.run(TestNG.java:1067)<br />
-              com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)<br />
-              com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:110)<br />
-                    <b>Caused by: </b> <a href="javascript:toggleElement('exception-1', 'block')" title="Click to expand/collapse">java.lang.IllegalStateException: Cannot get a STRING value from a NUMERIC cell</a><br />
-        <div class="stackTrace" id="exception-1">
-                      org.apache.poi.xssf.usermodel.XSSFCell.typeMismatch(XSSFCell.java:1003)<br />
-                      org.apache.poi.xssf.usermodel.XSSFCell.getRichStringCellValue(XSSFCell.java:389)<br />
-                      org.apache.poi.xssf.usermodel.XSSFCell.getStringCellValue(XSSFCell.java:341)<br />
-                      utilities.ExcelReader.getcellData(ExcelReader.java:35)<br />
-                      testcases.AddCustomerTest.TestdataReading(AddCustomerTest.java:60)<br />
-                      testcases.AddCustomerTest.getdata(AddCustomerTest.java:46)<br />
-                      java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
-                      java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br />
-                      java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
-                      java.base/java.lang.reflect.Method.invoke(Method.java:564)<br />
-                      org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)<br />
-                      org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)<br />
-                      org.testng.internal.invokers.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:53)<br />
-                      org.testng.internal.invokers.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:157)<br />
-                      org.testng.internal.Parameters.handleParameters(Parameters.java:791)<br />
-                      org.testng.internal.Parameters.handleParameters(Parameters.java:728)<br />
-                      org.testng.internal.invokers.ParameterHandler.handleParameters(ParameterHandler.java:72)<br />
-                      org.testng.internal.invokers.ParameterHandler.createParameters(ParameterHandler.java:51)<br />
-                      org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:917)<br />
-                      org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)<br />
-                      org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)<br />
-                      org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)<br />
-                      java.base/java.util.ArrayList.forEach(ArrayList.java:1510)<br />
-                      org.testng.TestRunner.privateRun(TestRunner.java:806)<br />
-                      org.testng.TestRunner.run(TestRunner.java:601)<br />
-                      org.testng.SuiteRunner.runTest(SuiteRunner.java:433)<br />
-                      org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)<br />
-                      org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)<br />
-                      org.testng.SuiteRunner.run(SuiteRunner.java:330)<br />
-                      org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br />
-                      org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)<br />
-                      org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)<br />
-                      org.testng.TestNG.runSuitesLocally(TestNG.java:1176)<br />
-                      org.testng.TestNG.runSuites(TestNG.java:1099)<br />
-                      org.testng.TestNG.run(TestNG.java:1067)<br />
-                      com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)<br />
-                      com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:110)<br />
-                  </div>
-          </div>
       </td>
 </tr>
-      </table>
+<tr>
+  <td class="method">
+          AddCustomerTest
+      </td>
+  <td class="duration">
+    2.840s
+  </td>
+  <td class="result">
+        
+          <i>Method Arguments: </i><span class="arguments">"Clinda ", "T", "qw22", "Customer added successfully"</span><br />
+    
+        
 
-
-  <table class="resultsTable" width="100%">
-    <tr><th colspan="3" class="header passed">Passed Tests</th></tr>
-              <tr>
+      </td>
+</tr>
+          <tr>
         <td colspan="3" class="group">testcases.BankManagerLoginTest</td>
       </tr>
       
@@ -119,7 +64,7 @@
           loginAsBankManager
       </td>
   <td class="duration">
-    1.019s
+    1.674s
   </td>
   <td class="result">
         
@@ -133,7 +78,7 @@
           verifylandingpage
       </td>
   <td class="duration">
-    0.712s
+    0.744s
   </td>
   <td class="result">
         
@@ -151,7 +96,7 @@
           OpenAccount
       </td>
   <td class="duration">
-    15.314s
+    92.583s
   </td>
   <td class="result">
         
@@ -161,16 +106,20 @@
 
       </td>
 </tr>
+          <tr>
+        <td colspan="3" class="group">testcases.customerDetails</td>
+      </tr>
+      
 <tr>
   <td class="method">
-          OpenAccount
+          Deletecustomer
       </td>
   <td class="duration">
-    12.674s
+    3.343s
   </td>
   <td class="result">
         
-          <i>Method Arguments: </i><span class="arguments">"Clinda ", "Dollar", "Account created successfully"</span><br />
+          <i>Method Arguments: </i><span class="arguments">"Clinda "</span><br />
     
         
 
@@ -178,14 +127,13 @@
 </tr>
 <tr>
   <td class="method">
-          OpenAccount
+          FirstNameSortComparison
       </td>
   <td class="duration">
-    34.357s
+    0.654s
   </td>
   <td class="result">
         
-          <i>Method Arguments: </i><span class="arguments">"Test", "Rupee", "Account created successfully"</span><br />
     
         
 
@@ -193,14 +141,13 @@
 </tr>
 <tr>
   <td class="method">
-          OpenAccount
+          LastnameSortComparison
       </td>
   <td class="duration">
-    14.917s
+    0.413s
   </td>
   <td class="result">
         
-          <i>Method Arguments: </i><span class="arguments">"Bismi", "Pound", "Account created successfully"</span><br />
     
         
 
@@ -208,29 +155,13 @@
 </tr>
 <tr>
   <td class="method">
-          OpenAccount
+          PostCodeSortComparison
       </td>
   <td class="duration">
-    12.450s
+    0.357s
   </td>
   <td class="result">
         
-          <i>Method Arguments: </i><span class="arguments">"test", "Rupee", "Account created successfully"</span><br />
-    
-        
-
-      </td>
-</tr>
-<tr>
-  <td class="method">
-          OpenAccount
-      </td>
-  <td class="duration">
-    13.469s
-  </td>
-  <td class="result">
-        
-          <i>Method Arguments: </i><span class="arguments">"jira", "Rupee", "Account created successfully"</span><br />
     
         
 

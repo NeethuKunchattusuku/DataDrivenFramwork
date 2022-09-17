@@ -21,6 +21,7 @@
             </methods>
             </class>
             <class name="testcases.OpenAccount"/>
+            <class name ="testcases.customerDetails"/>
         </classes>
     </test>
 </suite>

@@ -4,14 +4,14 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="1.731">
+           time="2.418">
   <properties />
   
 
   
 
-      <testcase name="verifylandingpage" time="0.712" />
-      <testcase name="loginAsBankManager" time="1.019" />
+      <testcase name="loginAsBankManager" time="1.674" />
+      <testcase name="verifylandingpage" time="0.744" />
   
 
 </testsuite>
