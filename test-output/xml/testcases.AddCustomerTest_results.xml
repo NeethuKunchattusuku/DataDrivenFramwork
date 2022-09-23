@@ -4,14 +4,14 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="11.138">
+           time="5.881">
   <properties />
   
 
   
 
-      <testcase name="AddCustomerTest" time="2.840" />
-      <testcase name="AddCustomerTest" time="8.298" />
+      <testcase name="AddCustomerTest" time="3.338" />
+      <testcase name="AddCustomerTest" time="2.543" />
   
 
 </testsuite>

@@ -17,7 +17,7 @@ import java.util.List;
 
 @Listeners(CustomListeners.class)
 public class OpenAccount extends TestBase {
-    WebElement dropdown =null;
+    WebElement dropdown = null;
 
     FileInputStream fis = new FileInputStream(excelpath);
     Alert alert;
@@ -28,20 +28,17 @@ public class OpenAccount extends TestBase {
     }
 
 
-
-
     @Test(dataProviderClass = AddCustomerTest.class, dataProvider = "getData")
     public void OpenAccount(String customer, String currencyparam, String message) throws InterruptedException {
         driver.findElement(By.xpath(OR.getProperty("OpenAccountbutton"))).click();
         Select se = new Select(driver.findElement(By.xpath(OR.getProperty("CustomerName"))));
-//        se.selectByIndex(1);
         List<WebElement> Lelement = se.getOptions();
         Select se1 = new Select(driver.findElement(By.xpath((OR.getProperty("Currency_xpath")))));
         List<WebElement> Celement = se1.getOptions();
-        for(int i =1; i<=Lelement.size()-1;i++) {
+        for (int i = 1; i <= Lelement.size() - 1; i++) {
             {
 
-                for(int j = 1;j<=Celement.size()-1;j++) {
+                for (int j = 1; j <= Celement.size() - 1; j++) {
                     se.selectByVisibleText(Lelement.get(i).getText());
                     se1.selectByVisibleText(Celement.get(j).getText());
                     driver.findElement(By.xpath(OR.getProperty("Process"))).click();
@@ -50,8 +47,8 @@ public class OpenAccount extends TestBase {
                     alert.accept();
                 }
 
-
             }
+
 
         }
     }

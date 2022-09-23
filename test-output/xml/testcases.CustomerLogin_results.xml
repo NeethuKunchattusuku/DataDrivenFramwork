@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="testcases.CustomerLogin"
+           tests="6"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="37.125">
+  <properties />
+  
+
+  
+
+      <testcase name="loginAsCustomer" time="1.862" />
+      <testcase name="transaction" time="1.264" />
+      <testcase name="customerLoginpageverification" time="1.062" />
+      <testcase name="DepositAmount" time="2.384" />
+      <testcase name="withdraw" time="7.734" />
+      <testcase name="TransactionPageveririfcation" time="22.819" />
+  
+
+</testsuite>

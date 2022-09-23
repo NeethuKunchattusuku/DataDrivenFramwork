@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuite name="testcases.OpenAccount"
-           tests="1"
+           tests="2"
            failures="0"
            errors="0"
            skipped="0"
-           time="92.583">
+           time="63.377">
   <properties />
   
 
   
 
-      <testcase name="OpenAccount" time="92.583" />
+      <testcase name="OpenAccount" time="24.263" />
+      <testcase name="OpenAccount" time="39.114" />
   
 
 </testsuite>

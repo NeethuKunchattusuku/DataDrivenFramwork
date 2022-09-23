@@ -8,6 +8,17 @@
     </listeners>
     <test verbose="2" preserve-order="true" name="C:\Users\neeth\Documents\GitHub\Repo\DataDrivenFramwork">
         <classes>
+            <class name="testcases.CustomerLogin">
+                <methods>
+                    <include name="customerLoginpageverification"/>
+                    <include name="customerLoginpageverification"/>
+                    <include name="loginAsCustomer"/>
+                    <include name="DepositAmount"/>
+                    <include name="transaction"/>
+                    <include name="TransactionPageveririfcation"/>
+                    <include name="withdraw"/>
+                </methods>
+            </class>
             <class name="testcases.BankManagerLoginTest">
                 <methods>
                     <include name="loginAsBankManager"/>
@@ -15,13 +26,14 @@
                 </methods>
             </class>
             <class name="testcases.AddCustomerTest">
-            <methods>
-                <include name="AddCustomerTest"/>
-                <include name="TestdataReading"/>
-            </methods>
+                <methods>
+                    <include name="AddCustomerTest"/>
+                    <include name="TestdataReading"/>
+                </methods>
             </class>
             <class name="testcases.OpenAccount"/>
-            <class name ="testcases.customerDetails"/>
+            <class name="testcases.customerDetails"/>
+
         </classes>
     </test>
 </suite>

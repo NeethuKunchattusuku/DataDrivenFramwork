@@ -1,5 +1,6 @@
 base\Listeners\ScreenshotTest.class
 base\TestBase.class
+testcases\customerDetails.class
 utilities\ExtentManager.class
 base\Listeners\CustomListeners.class
 resources\Listeners\CustomListeners.class

@@ -4,16 +4,16 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="4.767">
+           time="63.348">
   <properties />
   
 
   
 
-      <testcase name="LastnameSortComparison" time="0.413" />
-      <testcase name="PostCodeSortComparison" time="0.357" />
-      <testcase name="Deletecustomer" time="3.343" />
-      <testcase name="FirstNameSortComparison" time="0.654" />
+      <testcase name="LastnameSortComparison" time="20.214" />
+      <testcase name="PostCodeSortComparison" time="20.205" />
+      <testcase name="Deletecustomer" time="2.516" />
+      <testcase name="FirstNameSortComparison" time="20.413" />
   
 
 </testsuite>

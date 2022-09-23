@@ -27,7 +27,6 @@ public class customerDetails extends TestBase {
     }
 
 
-
     public List<String> SortandCompareMethod(String customerDetailsGrid) throws InterruptedException {
 
         //Capturing the Values and Sorting it in Descending order
@@ -36,6 +35,7 @@ public class customerDetails extends TestBase {
         for (WebElement p : BeforeSort) {
             SortedManually.add(p.getText());
         }
+
         Collections.sort(SortedManually, Collections.reverseOrder());
         return SortedManually;
     }
@@ -50,22 +50,18 @@ public class customerDetails extends TestBase {
     }
 
     @Test(dataProviderClass = AddCustomerTest.class, dataProvider = "getData")
-    public void Deletecustomer(String Fname)
-    {
+    public void Deletecustomer(String Fname) {
         driver.findElement(By.xpath(OR.getProperty("Customertab"))).click();
-        for(int i=0;i<=Fname.length()-1;i++) {
+        for (int i = 0; i <= Fname.length() - 1; i++) {
             if (Fname == "Clinda")
                 driver.findElement(By.xpath(OR.getProperty("SearchText"))).sendKeys(Fname);
-            String path = "//div/table/tbody/"+"tr["+i+"]/td[5]" ;
+            String path = "//div/table/tbody/" + "tr[" + i + "]/td[5]";
 
             driver.findElement(By.xpath(OR.getProperty("Deletcustomerbutton"))).click();
         }
-
-
-
-
     }
-  @Test
+
+    @Test
     public void FirstNameSortComparison() throws InterruptedException {
         List<String> FNamesortedManually = SortandCompareMethod((OR.getProperty("CustomerFirstName")));
         driver.findElement(By.xpath(OR.getProperty("FirstNamehyperlink"))).click();
