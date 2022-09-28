@@ -35,23 +35,32 @@ public class OpenAccount extends TestBase {
         List<WebElement> Lelement = se.getOptions();
         Select se1 = new Select(driver.findElement(By.xpath((OR.getProperty("Currency_xpath")))));
         List<WebElement> Celement = se1.getOptions();
-        for (int i = 1; i <= Lelement.size() - 1; i++) {
-            {
+//        for (int i = 1; i <= Lelement.size() - 1; i++) {
+//            {
+//
+//                for (int j = 1; j <= Celement.size() - 1; j++) {
 
-                for (int j = 1; j <= Celement.size() - 1; j++) {
-                    se.selectByVisibleText(Lelement.get(i).getText());
-                    se1.selectByVisibleText(Celement.get(j).getText());
-                    driver.findElement(By.xpath(OR.getProperty("Process"))).click();
-                    alert = wait.until(ExpectedConditions.alertIsPresent());
-                    Assert.assertTrue(alert.getText().contains(message));
-                    alert.accept();
+//                    System.out.println(Lelement.get(i).getText() + "+++++++++++");
+//                    System.out.println(Celement.get(j).getText() + "+++++++++++");
+//                    if (Lelement.get(i).getText() == customer) {
+//                        if (Celement.get(j).getText() == currencyparam) {
+                            se.selectByVisibleText(customer);
+                            Thread.sleep(1000);
+                            se1.selectByVisibleText(currencyparam);
+                            Thread.sleep(1000);
+                            driver.findElement(By.xpath(OR.getProperty("Process"))).click();
+                            alert = wait.until(ExpectedConditions.alertIsPresent());
+                            Assert.assertTrue(alert.getText().contains(message));
+                            alert.accept();
+//                        }
+//                    }
+
                 }
 
+
             }
+//        }
 
+//    }
 
-        }
-    }
-
-
-}
+//}

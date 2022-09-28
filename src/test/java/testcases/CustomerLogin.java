@@ -108,7 +108,6 @@ Thread.sleep(1000);
         driver.findElement(By.xpath(OR.getProperty("withdrabutton"))).click();
         WebElement tempmsg = driver.findElement(By.xpath(OR.getProperty("withdrawdmsg")));
         String temp=tempmsg.getText();
-        System.out.println(temp+"+++++++++++++++++++++++++");
         Assert.assertEquals(temp,"Transaction Failed. You can not withdraw amount more than the balance.");
         Thread.sleep(1000);
         driver.findElement(By.xpath(OR.getProperty("withdrawamount"))).click();
